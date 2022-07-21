@@ -251,4 +251,21 @@ h1 {
         top: -90px;
         left: -130px;
     }
+    p {
+        font-size: 0.9rem;
+    }
+
+    h1 {
+        font-size: 3rem;
+    }
+
+    img {
+        width: 50%;
+    }
+    .top {
+        padding: 0 1rem;
+    }
+    .bottom {
+        margin: 0 3rem;
+    }
 }

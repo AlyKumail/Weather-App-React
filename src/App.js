@@ -139,33 +139,35 @@ function App() {
                         {data.weather && <p>{data.weather[0].main}</p>}
                     </div>
                 </div>
-                <div className="bottom">
-                    <div className="feels">
-                        {data.main && (
-                            <p className="bold">
-                                {parseInt(data.main.feels_like - 273)}°C
-                            </p>
-                        )}
+                {data.main && (
+                    <div className="bottom">
+                        <div className="feels">
+                            {data.main && (
+                                <p className="bold">
+                                    {parseInt(data.main.feels_like - 273)}°C
+                                </p>
+                            )}
 
-                        <p>Feels Like</p>
+                            <p>Feels Like</p>
+                        </div>
+                        <div className="humidity">
+                            {data.main && (
+                                <p className="bold">
+                                    {parseInt(data.main.humidity)}%
+                                </p>
+                            )}
+                            <p>Humidity</p>
+                        </div>
+                        <div className="wind">
+                            {data.wind && (
+                                <p className="bold">
+                                    {parseInt(data.wind.speed)}mph
+                                </p>
+                            )}
+                            <p>Wind Speed</p>
+                        </div>
                     </div>
-                    <div className="humidity">
-                        {data.main && (
-                            <p className="bold">
-                                {parseInt(data.main.humidity)}%
-                            </p>
-                        )}
-                        <p>Humidity</p>
-                    </div>
-                    <div className="wind">
-                        {data.wind && (
-                            <p className="bold">
-                                {parseInt(data.wind.speed)}mph
-                            </p>
-                        )}
-                        <p>Wind Speed</p>
-                    </div>
-                </div>
+                )}
             </div>
         </div>
     );
